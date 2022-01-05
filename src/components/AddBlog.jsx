@@ -1,10 +1,13 @@
 import {useState} from 'react';
+import {useNavigate} from "react-router-dom";
 
-export default function AddBlog({blog}) {
+export default function AddBlog({blogs,updateBlogs}) {
     const [username, setUserName] = useState('');
     const [title, setTitle] = useState('');
     const [summary, setSummary] = useState('');
     const [content, setContent] = useState('');
+
+    const navigate = useNavigate();
 
     function formattedDate(date) {
         const year = date.getFullYear();
@@ -13,14 +16,34 @@ export default function AddBlog({blog}) {
         return `${year}-${month}-${day}`;
     }
 
+    async function postData(newPost){
+        const result = await fetch(`http://localhost:8080/api/v1/blogs`,{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newPost)
+        });
+        const data = await result.json();
+        updateBlogs([...blogs,data]);
+        navigate("/");
+    }
+
     function handleSubmit(e) {
         e.preventDefault();
         const date = formattedDate(new Date())
+        const newPost = {
+            username: username,
+            title: title,
+            summary: summary,
+            content: content,
+            localDate: formattedDate(new Date()),
+        }
+        postData(newPost);
         setUserName('');
         setTitle('');
         setSummary('');
         setContent('');
-        alert(`Date: ${date}`);
     }
 
     return (

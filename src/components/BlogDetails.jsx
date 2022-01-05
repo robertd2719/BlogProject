@@ -1,6 +1,7 @@
 import {useParams} from "react-router-dom";
+import {useEffect,useState} from 'react';
 
-export default function BlogDetails(){
+export default function BlogDetails({blogs}){
 
     const {id} = useParams();
     return (
