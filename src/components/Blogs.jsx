@@ -1,4 +1,6 @@
 import {useEffect,useState} from 'react';
+import BlogItem from "./BlogItem";
+
 export default function Blogs(){
     const [blogs,updateBlogs] = useState([])
 
@@ -14,7 +16,7 @@ export default function Blogs(){
 
     return(
         <div>
-            {blogs.map(item => <li>{item.title}</li>)}
+            {blogs.map(item => <BlogItem item={item} />)}
         </div>
     )
 }

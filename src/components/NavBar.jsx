@@ -9,7 +9,7 @@ export default function NavBar(){
                     BlogMaker
                 </div>
                 <div className="nav__links">
-                    <Link to="/blogs">BlogList</Link>
+                    <Link to="/">BlogList</Link>
                     <Link to="/about">About</Link>
                 </div>
             </nav>
