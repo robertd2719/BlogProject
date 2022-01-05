@@ -8,11 +8,9 @@ export default function Blogs(){
         updateBlogs(data);
     }
 
-
     useEffect(()=>{
         fetchBlogs();
     },[])
-
 
     return(
         <div>
