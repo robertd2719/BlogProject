@@ -90,3 +90,22 @@ nav{
   margin: 5px 0;
 }
 
+.container{
+  width: 80%;
+  margin: 10px auto;
+  padding: 1rem;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
+
+.blog__title{
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.blog__username{
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
