@@ -72,3 +72,21 @@ nav{
   color: blue;
 }
 
+.new__blog__form input{
+  width: 60ch;
+  padding: .25rem;
+}
+
+.new__blog__form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__field{
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+

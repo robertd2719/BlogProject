@@ -10,7 +10,7 @@ export default function NavBar(){
                 </div>
                 <div className="nav__links">
                     <Link to="/">BlogList</Link>
-                    <Link to="/about">About</Link>
+                    <Link to="/new">Add</Link>
                 </div>
             </nav>
         </>
