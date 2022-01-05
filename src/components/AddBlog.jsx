@@ -1,6 +1,5 @@
 import {useState} from 'react';
 
-
 export default function AddBlog({blog}) {
     const [username, setUserName] = useState('');
     const [title, setTitle] = useState('');
@@ -22,7 +21,6 @@ export default function AddBlog({blog}) {
         setSummary('');
         setContent('');
         alert(`Date: ${date}`);
-
     }
 
     return (
